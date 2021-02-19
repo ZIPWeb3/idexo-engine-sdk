@@ -8,8 +8,6 @@ const options = {
     logging: false,     // Enable network request logging
 }
 
-// const jwk = require('./keys/key1.json')
-
 const _arweave = Arw.init(options)
 
 class Arweave {
@@ -23,10 +21,9 @@ class Arweave {
 		}, this.jwk)
 		await _arweave.transactions.sign(transaction, this.jwk)
 		return transaction
-		//returns the transaction object which has reward parameter value in it -> use that to get the Arweave gas estimate
-		//in turn pay that through ZIP before putting through the post (deploy) transaction
+	
 	}
-
+	
 	async uploadHTML(data) {
 		let transaction = await _arweave.createTransaction({
 			data: data
@@ -34,11 +31,10 @@ class Arweave {
 		transaction.addTag('Content-Type', 'text/html')
 		await _arweave.transactions.sign(transaction, this.jwk)
 		return transaction
-		//returns the transaction object which has reward parameter value in it -> use that to get the Arweave gas estimate
-		//in turn pay that through ZIP before putting through the post (deploy) transaction
+		
 	}
 
-	async uploadBuffer(data, encoding) { //data must be string (should enforce that with type)
+	async uploadBuffer(data, encoding) { 
 		let transaction = await _arweave.createTransaction({
 			data: Buffer.from(data, encoding)
 		}, this.jwk)
