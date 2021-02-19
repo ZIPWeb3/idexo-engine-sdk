@@ -4,7 +4,7 @@ This is the SDK used by the Idexo engine that sits behind the API. The [idexo-sd
 
 ## How to request a new blockchain integration and/or updates to an existing blockchain integration
 
-To request a new blockchain integation and/or updates to an existing integation, please [add an issue](https://github.com/ZIPWeb3/idexo-engine-sdk/issues) to this repo that
+To request a new blockchain integration and/or updates to an existing integration, please [add an issue](https://github.com/ZIPWeb3/idexo-engine-sdk/issues) to this repo that
 describes your request in detail. 
 
 ## How to add / edit features for a specific blockchain
